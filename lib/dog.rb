@@ -4,6 +4,7 @@ class Dog
   
   def initialize(name:, breed:, id: = nil)
     dog_hash.each {|key, value| self.send(("#{key}="), value)}
+  end
   end 
 
 end 
