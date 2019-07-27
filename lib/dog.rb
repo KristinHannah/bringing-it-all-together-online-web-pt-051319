@@ -60,4 +60,9 @@ class Dog
     dog
   end 
   
+  def Dog::find_by_name(name)
+    sql = "SELECT * FROM dogs WHERE name = ?;"
+    DB[:conn].execute(sql, name)
+  end 
+  
 end 
