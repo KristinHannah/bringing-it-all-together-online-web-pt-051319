@@ -39,7 +39,7 @@ class Dog
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
   end 
   
-  def self.create(name: name, breed: breed)
-  
+  def self.create(hash)
+    hash.each {|key, value| self.send({"key" => "value"})
   
 end 
