@@ -66,6 +66,9 @@ class Dog
     self.new_from_db(row)
   end 
   
+  def self.find_or_create_by
+    
+  end 
   
   def Dog::find_by_name(name)
     sql = "SELECT * FROM dogs WHERE name = ?;"
