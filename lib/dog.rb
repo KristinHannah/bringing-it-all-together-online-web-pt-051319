@@ -63,7 +63,7 @@ class Dog
   def self.find_by_id(id)
     sql = "SELECT * FROM dogs WHERE id = ?"
     row = DB[:conn].execute(sql, id)
-
+    row[0]
   end 
   
   
