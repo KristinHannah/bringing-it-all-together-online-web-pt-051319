@@ -20,4 +20,16 @@ class Dog
     DB[:conn].execute(sql)
   end 
 
+  def Dog::drop_table 
+    sql = "DROP TABLE dogs;"  
+    
+    DB[:conn].execute(sql)
+  end 
+  
+  def Dog::new_from_db
+    
+  end 
+
+  
+  
 end 
