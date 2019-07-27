@@ -39,6 +39,12 @@ class Dog
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
   end 
   
+  def update
+    sql = "UPDATE songs SET name = ?, breed = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
+  end
+
+  
   def self.create(hash)
     hash.each {|key, value| self.send({"key" => "value"})}
   end 
